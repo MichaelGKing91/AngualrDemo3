@@ -1,0 +1,13 @@
+<h1>Welcome to Pauper's Reddit</h1>
+<div *ngIf="redditdata!=null">
+  Title: {{redditdata.data.children[0].data.title}} <br />
+  Image: <img src="{{redditdata.data.children[0].data.thumbnail}}" /> <br />
+  Link: <a href="https://www.reddit.com{{redditdata.data.children[0].data.permalink}}">Veiw feed</a> <br />
+</div>
+<ng-container *ngIf="redditdata!=null">
+  <div *ngFor="let cur of redditdata.data.children">
+    Title: {{cur.data.title}} <br />
+    Image: <img src="{{cur.data.thumbnail}}" /> <br />
+    Link: <a href="https://www.reddit.com{{cur.data.permalink}}">Veiw feed</a> <br /><br />
+  </div>
+</ng-container>

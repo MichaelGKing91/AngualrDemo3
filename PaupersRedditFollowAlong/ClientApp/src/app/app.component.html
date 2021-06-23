@@ -1,0 +1,9 @@
+<h1>Pauper's Reddit</h1>
+<button (click)="loadReddit()">Load Reddit</button>
+
+<ng-container *ngIf="reddit && reddit.data">
+  <div *ngFor="let item of reddit.data.children">
+    <app-show-reddit [redditItem]="item.data"></app-show-reddit>
+
+  </div>
+</ng-container>

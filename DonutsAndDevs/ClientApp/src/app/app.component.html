@@ -1,0 +1,8 @@
+
+<h1>Donuts</h1>
+<button (click)="loadAllDonuts()">Load Donuts</button>
+<ng-container *ngIf="allDonuts && allDonuts.results">
+
+    <app-all-donuts *ngFor="let cur of allDonuts.results" [aDonut]="cur"></app-all-donuts>
+
+</ng-container>

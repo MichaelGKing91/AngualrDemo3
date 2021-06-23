@@ -1,0 +1,13 @@
+<h1>More Container Fun</h1>
+<app-mycomp thename="Fred"></app-mycomp>
+<app-mycomp thename="Sally"></app-mycomp>
+
+<h1>My Array:</h1>
+<ng-container *ngFor="let s of names">
+  <app-mycomp [thename]="s"></app-mycomp>
+</ng-container>
+
+<h1>My Array: Take 2</h1>
+<div *ngFor="let s of names" style="margin: 1rem; background-color:aqua;">
+  <app-mycomp [thename]="s"></app-mycomp>
+</div>

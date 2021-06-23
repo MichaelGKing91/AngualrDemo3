@@ -1,0 +1,26 @@
+<h1>My ToDo:</h1>
+<div *ngFor="let cur of theTasks">
+  Task: {{ cur.task }}<br />
+  Complete: {{ cur.complete }}<br /><br />
+</div>
+
+
+<button (click)="loadSWData()">Star Wars Data</button>
+
+<button (click)="loadDnDData()">DnD Data</button>
+
+<ng-container *ngIf="starwars != null">
+  <h1>Star Wars</h1>
+  {{ starwars.title }} <br />
+  {{ starwars.episode_id}} <br />
+  {{ starwars.opening_crawl }} <br />
+  {{ starwars.director }}<br />
+  First character: {{ starwars.characters[0]}}
+
+  <h2>Characters:</h2>
+  <div *ngFor="let ch of starwars.characters">
+    <a href="{{ ch }}">Character</a>
+
+  </div>
+</ng-container>
+
